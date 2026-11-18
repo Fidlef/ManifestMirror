@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ManifestMirror</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header><p>LOCAL EXTENSION AUDITOR</p><h1>Manifest<span>Mirror</span></h1><p class="lede">See what a browser extension can do—and what becomes possible when permissions combine.</p></header>
+    <section class="workspace">
+      <div class="editor-card">
+        <div class="card-head"><h2>manifest.json</h2><button id="demo">Load synthetic demo</button></div>
+        <label for="manifest">Manifest JSON</label>
+        <textarea id="manifest" spellcheck="false" aria-describedby="privacy">{\n  "manifest_version": 3,\n  "name": "Example Notes",\n  "permissions": ["storage"]\n}</textarea>
+        <p id="privacy">Analyzed in this tab. Nothing is uploaded.</p>
+        <button class="primary" id="audit">Audit permissions</button>
+      </div>
+      <div class="results-card" aria-live="polite">
+        <p class="kicker">CAPABILITY PROFILE</p>
+        <div class="score"><strong id="score">—</strong><span id="level">Waiting for audit</span></div>
+        <div id="summary" class="summary">Paste a browser-extension manifest to begin.</div>
+        <h2>Findings</h2><div id="findings" class="findings"></div>
+        <h2>Least-privilege questions</h2><ul id="questions"><li>Run an audit to generate review questions.</li></ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"manifest-mirror","private":true,"type":"module","scripts":{"test":"node --test tests/audit.test.mjs"}}
